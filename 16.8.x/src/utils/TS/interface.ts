@@ -10,15 +10,15 @@ export interface RouterProps<T> {
   exact?: boolean;
   redirectUrl?: string;
   component: any;
-  children?: RouterProps<T>[]
+  children?: RouterProps<T>[];
 }
 
 export interface RenderRouterPropsRouters<T> {
   children: RouterProps<T>[];
   isNeedShow: boolean;
-  path: string
+  path: string;
 }
 
-export interface RenderRouterProps<T>{
-  routers: RenderRouterPropsRouters<T>
+export interface RenderRouterProps<T> {
+  routers: RenderRouterPropsRouters<T>;
 }

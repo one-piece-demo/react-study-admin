@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {Switch, Route, Redirect, withRouter, RouteComponentProps } from 'react-router-dom';
-import {RouterProps, RenderRouterProps} from '@/utils/TS/interface';
+import * as React from "react";
+import {Switch, Route, Redirect, withRouter, RouteComponentProps } from "react-router-dom";
+import {RouterProps, RenderRouterProps} from "@/utils/TS/interface";
 
-interface Props extends RenderRouterProps<Object>, RouteComponentProps {}
+interface Props extends RenderRouterProps<Record<string, any>>, RouteComponentProps {}
 
 class RenderRouter<T> extends React.Component<Props, {}> {
   requireLogin = (component: React.ReactNode, props: RouterProps<T>) => {
@@ -27,7 +27,7 @@ class RenderRouter<T> extends React.Component<Props, {}> {
             exact={item.exact}
             path={item.path}
             render={props => this.requireLogin(<ComponentPage {...props} routers={item}></ComponentPage>, item) }
-            key={'page' + index + item.path}/>;
+            key={"page" + index + item.path}/>;
         })}
         {/* 处理当前routers 不存在路由 */}
         <Route render={() => <Redirect to="/404"/>} />
