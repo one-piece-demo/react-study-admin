@@ -3,12 +3,6 @@ import { Button } from "antd";
 import Demo from "@/components/Demo";
 import DocLine from "@/components/DocLine";
 
-/**
- * PureComponent
- * React.PureComponent 中的 shouldComponentUpdate() 仅作对象的浅层比较
- * 浅层对比 prop 和 state 的方式来实现了该函数提高性能
- */
-
 interface CountInterface {
   count: number;
   words: string[];
@@ -71,6 +65,11 @@ class PureDemo extends Component<{}, CountInterface> {
           如果赋予 React 组件相同的 props 和 state，render()
           函数会渲染相同的内容，那么在某些情况下使用 React.PureComponent 可提高性能。
         </p>
+        <DocLine>
+          <a href="https://react.docschina.org/docs/react-api.html#reactpurecomponent">
+            React.PureComponent文档
+          </a>
+        </DocLine>
         <Demo title="React.PureComponent">
           <div>
             <h3>测试words</h3>
@@ -93,11 +92,6 @@ class PureDemo extends Component<{}, CountInterface> {
             </div>
           </div>
         </Demo>
-        <DocLine>
-          <a href="https://react.docschina.org/docs/react-api.html#reactpurecomponent">
-            React.PureComponent文档
-          </a>
-        </DocLine>
       </div>
     );
   }

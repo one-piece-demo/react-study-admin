@@ -97,6 +97,11 @@ code {
   height: 100vh;
 }
 
+.ace_editor {
+  border-radius: 3px;
+  min-height: 24px;
+}
+
 @keyframes wrapper--fade {
   0% {
     opacity: 0;

@@ -2,7 +2,7 @@ import * as React from "react";
 import {Link, withRouter, RouteComponentProps} from "react-router-dom";
 import RenderRouter from "@/components/RenderRouter/";
 import { Layout, Menu, Breadcrumb, Icon, Row, Col } from "antd";
-import navsList from "@/mock/nav";
+import navsList from "@/router/nav";
 import {getNodeByKeyValues} from "flo-utils";
 import {RouterProps, RenderRouterProps} from "@/utils/TS/interface";
 

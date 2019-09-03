@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import AceEditor from "react-ace";
 
 import "brace/mode/javascript";
@@ -6,11 +6,11 @@ import "brace/theme/monokai";
 import "brace/ext/language_tools";
 
 export interface CodeAceProps {
-  code: string
+  code: string;
 }
 
-function CodeAce (props: CodeAceProps) {
-  const {code} = props;
+function CodeAce(props: CodeAceProps) {
+  const { code } = props;
 
   return (
     <AceEditor
@@ -32,7 +32,11 @@ function CodeAce (props: CodeAceProps) {
         enableSnippets: false,
         showLineNumbers: true,
         tabSize: 2,
-      }}/>
+      }}
+      // onLoad={editor => {
+      //   editor.renderer.setPadding(12);
+      // }}
+    />
   );
 }
 

@@ -70,6 +70,9 @@ class MemoDemo extends Component<{}, CountInterface> {
           React.memo 为高阶组件。它与 React.PureComponent 非常相似，但它适用于函数组件，但不适用于
           class 组件
         </p>
+        <DocLine>
+          <a href="https://react.docschina.org/docs/react-api.html#reactmemo">React.memo文档</a>
+        </DocLine>
         <Demo title="React.memo">
           <div>
             <h3>测试words</h3>
@@ -92,9 +95,6 @@ class MemoDemo extends Component<{}, CountInterface> {
             </div>
           </div>
         </Demo>
-        <DocLine>
-          <a href="https://react.docschina.org/docs/react-api.html#reactmemo">React.memo文档</a>
-        </DocLine>
       </div>
     );
   }
