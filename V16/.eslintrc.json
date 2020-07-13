@@ -15,8 +15,6 @@
   "rules": {
 		"prettier/prettier": "error",
 		"indent": ["error", 2],
-		"quotes": ["error", "double"],
-		"jsx-quotes": [2],
 		"semi": [
 			"error",
 			"always"
