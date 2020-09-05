@@ -16,7 +16,7 @@
     "babel-plugin-import": "^1.12.0",
     "customize-cra": "^0.2.14",
     "flo-utils": "^0.1.8",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-ace": "^7.0.2",
     "react-app-rewired": "^2.1.3",
