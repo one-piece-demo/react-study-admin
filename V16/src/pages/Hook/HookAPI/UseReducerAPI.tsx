@@ -1,7 +1,7 @@
-import React from "react";
-import { Tabs } from "antd";
-import CodeAce from "@/components/CodeAce";
-import DocLine from "@/components/DocLine";
+import React from 'react';
+import { Tabs } from 'antd';
+import CodeAce from '@/components/CodeAce';
+import DocLine from '@/components/DocLine';
 
 const { TabPane } = Tabs;
 
@@ -73,11 +73,11 @@ function UseReducerAPI() {
       <h3>useReducer</h3>
       <p>useState 的替代方案</p>
       <DocLine type="warn">
-        它接收一个形如 (state, action) => newState 的 reducer，并返回当前的 state 以及与其配套的
-        dispatch 方法
+        它接收一个形如 <code>(state, action) ={'>'} newState</code> 的 reducer，并返回当前的 state
+        以及与其配套的 dispatch 方法
       </DocLine>
       <DocLine type="warn">useReducer是Hooks的作弊模式</DocLine>
-      <CodeAce code={"const [state, dispatch] = useReducer(reducer, initialArg, init);"}></CodeAce>
+      <CodeAce code={'const [state, dispatch] = useReducer(reducer, initialArg, init);'}></CodeAce>
       <Tabs>
         <TabPane tab="示例" key="1">
           <p>
@@ -92,11 +92,11 @@ function UseReducerAPI() {
             <li>
               <CodeAce
                 code={`
-const [state, dispatch] = useReducer(
-  reducer,
-  {count: initialCount}
-);
-`}
+                const [state, dispatch] = useReducer(
+                  reducer,
+                  {count: initialCount}
+                );
+                `}
               ></CodeAce>
             </li>
             <li>惰性初始化: state 作为第三个参数传入 useReducer </li>

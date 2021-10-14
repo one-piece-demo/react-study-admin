@@ -1,7 +1,7 @@
 /**
  * 节流
  */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 const useThrottle = (fn, ms = 30, deps = []) => {
   const previous = useRef(0);

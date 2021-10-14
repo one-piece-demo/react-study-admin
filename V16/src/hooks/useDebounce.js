@@ -2,7 +2,7 @@
  * 防抖 hooks
  */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 const useDebounce = (fn, ms = 30, deps = []) => {
   let timeout = useRef();

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Demo from "@/components/Demo";
-import DocLine from "@/components/DocLine";
-import CodeAce from "@/components/CodeAce";
+import React, { Component } from 'react';
+import Demo from '@/components/Demo';
+import DocLine from '@/components/DocLine';
+import CodeAce from '@/components/CodeAce';
 
 const code = `React.createElement(
   type,

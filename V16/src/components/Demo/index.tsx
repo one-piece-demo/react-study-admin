@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Card } from "antd";
-import "./index.scss";
+import * as React from 'react';
+import { Card } from 'antd';
+import './index.scss';
 
 export interface DemoProps {
   title?: React.ReactNode;

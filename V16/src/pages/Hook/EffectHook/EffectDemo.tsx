@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback, useReducer } from "react";
-import { Button, Input, Timeline, message } from "antd";
+import React, { useState, useEffect, useRef, useCallback, useReducer } from 'react';
+import { Button, Input, Timeline, message } from 'antd';
 
 interface DataObj {
   name: string;
@@ -11,12 +11,10 @@ interface ReduceState {
 }
 
 interface ReduceAction {
-  type: string,
+  type: string;
   count?: number | undefined;
   step?: number | undefined;
 }
-
-
 
 export interface DemoProps {
   cvalue: string;
@@ -24,10 +22,10 @@ export interface DemoProps {
   dataSource: DataObj[];
 }
 
-const Demo: React.FunctionComponent<DemoProps> = props => {
+const Demo: React.FunctionComponent<DemoProps> = (props) => {
   const { count, dataSource, cvalue } = props;
   // Keep track of the latest value.
-  const latestMessage = useRef("");
+  const latestMessage = useRef('');
   const latestCount = useRef(0);
   const [scount, setCount] = useState(count || 0);
   // eslint-disable-next-line prettier/prettier
@@ -38,8 +36,8 @@ const Demo: React.FunctionComponent<DemoProps> = props => {
     console.log(latestCount.current);
     const lcount = latestCount.current;
     if (lcount && !(lcount % 10)) {
-      message.warning("添加条数超过" + lcount);
-    }    
+      message.warning('添加条数超过' + lcount);
+    }
   }, [latestCount]);
 
   useEffect(() => {
@@ -54,11 +52,15 @@ const Demo: React.FunctionComponent<DemoProps> = props => {
   }, [count, dataSource, showMessage]);
 
   const getState = () => {
-    setTimeout(() => message.info(`
+    setTimeout(
+      () =>
+        message.info(`
       最新输入值: 
       cvalue: ${cvalue},
       lastValue: ${latestMessage.current}
-    `), 3000);
+    `),
+      3000,
+    );
   };
   // console.log(2);
   return (
@@ -67,7 +69,9 @@ const Demo: React.FunctionComponent<DemoProps> = props => {
         <b>total: </b>
         {scount}
       </h3>
-      <Button style={{ marginBottom: 16 }} onClick={getState}>2s后获取输入最新值</Button>
+      <Button style={{ marginBottom: 16 }} onClick={getState}>
+        2s后获取输入最新值
+      </Button>
       <Timeline>
         {data.length
           ? data.map((item, i) => <Timeline.Item key={i + item.name}>{item.name}</Timeline.Item>)
@@ -77,24 +81,24 @@ const Demo: React.FunctionComponent<DemoProps> = props => {
   );
 };
 
-const initialState:ReduceState = {
+const initialState: ReduceState = {
   count: 0,
   step: 1,
 };
 
-function reducer(state:ReduceState, action:ReduceAction):ReduceState {
+function reducer(state: ReduceState, action: ReduceAction): ReduceState {
   const { count, step } = state;
-  if (action.type === "tick") {
-    const lastCount = ((count || count === 0) && (step || step === 0)) ? count + step : 0;
+  if (action.type === 'tick') {
+    const lastCount = (count || count === 0) && (step || step === 0) ? count + step : 0;
     return { count: lastCount, step };
-  } else if (action.type === "step") {
+  } else if (action.type === 'step') {
     return { count, step: action.step };
   } else {
     throw initialState;
   }
 }
 
-function Counter () {
+function Counter() {
   // const [count, setCount] = useState(0);
   // const [step, setStep] = useState(1);
 
@@ -119,7 +123,7 @@ function Counter () {
 
   useEffect(() => {
     const id = setInterval(() => {
-      dispatch({ type: "tick" });
+      dispatch({ type: 'tick' });
     }, 1000);
     return () => clearInterval(id);
   }, [dispatch]);
@@ -127,25 +131,29 @@ function Counter () {
   return (
     <>
       <h1>{count}</h1>
-      <input value={step} type="number" onChange={e => {
-        dispatch({
-          type: "step",
-          step: Number(e.target.value)
-        });
-      }} />
+      <input
+        value={step}
+        type="number"
+        onChange={(e) => {
+          dispatch({
+            type: 'step',
+            step: Number(e.target.value),
+          });
+        }}
+      />
     </>
   );
 }
 
 const EffectDemo: React.FunctionComponent<{}> = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const [scount, setCount] = useState(0);
   const [data, setData] = useState<DataObj[]>([]);
 
   const handleClick = () => {
     const o = { name: value };
-    setData(d => [...d, o]);
-    setCount(c => c + 1);
+    setData((d) => [...d, o]);
+    setCount((c) => c + 1);
   };
 
   // console.log(1);
@@ -153,8 +161,13 @@ const EffectDemo: React.FunctionComponent<{}> = () => {
   return (
     <div className="effect-demo">
       <div>
-        <Input allowClear value={value} onChange={e => setValue(e.target.value)} placeholder="请输入"></Input>
-        <Button style={{ marginTop: 16 }} icon="plus" type="primary" onClick={handleClick}>
+        <Input
+          allowClear
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="请输入"
+        ></Input>
+        <Button style={{ marginTop: 16 }} type="primary" onClick={handleClick}>
           添加
         </Button>
       </div>

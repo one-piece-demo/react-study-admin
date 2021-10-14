@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Demo from "@/components/Demo";
-import DocLine from "@/components/DocLine";
-import CodeAce from "@/components/CodeAce";
+import React, { Component } from 'react';
+import Demo from '@/components/Demo';
+import DocLine from '@/components/DocLine';
+import CodeAce from '@/components/CodeAce';
 
 const code = `// 该组件是动态加载的
 const OtherComponent = React.lazy(() => import('./OtherComponent'));

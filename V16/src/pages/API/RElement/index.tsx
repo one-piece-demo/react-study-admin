@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import RCreate from "./Create";
-import RClone from "./Clone";
-import RValid from "./Valid";
+import React, { Component } from 'react';
+import RCreate from './Create';
+import RClone from './Clone';
+import RValid from './Valid';
 
 class RElement extends Component<{}, {}> {
   render() {

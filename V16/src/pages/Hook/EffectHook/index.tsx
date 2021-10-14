@@ -1,10 +1,10 @@
-import React from "react";
-import DocLine from "@/components/DocLine";
-import Demo from "@/components/Demo";
-import CountDemo from "../Overview/CountDemo";
-import CodeAce from "@/components/CodeAce";
-import EffectDemo from "./EffectDemo";
-import { effectCode, effectAsyncCode } from "./code";
+import React from 'react';
+import DocLine from '@/components/DocLine';
+import Demo from '@/components/Demo';
+import CountDemo from '../Overview/CountDemo';
+import CodeAce from '@/components/CodeAce';
+import EffectDemo from './EffectDemo';
+import { effectCode, effectAsyncCode } from './code';
 
 function HookEffect() {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
-import CodeAce from "@/components/CodeAce";
-import DocLine from "@/components/DocLine";
+import React from 'react';
+import CodeAce from '@/components/CodeAce';
+import DocLine from '@/components/DocLine';
 
 const refCode = `
 function TextInputWithFocusButton() {

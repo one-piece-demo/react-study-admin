@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import Demo from "@/components/Demo";
-import DocLine from "@/components/DocLine";
-import CodeAce from "@/components/CodeAce";
+import React, { Component } from 'react';
+import Demo from '@/components/Demo';
+import DocLine from '@/components/DocLine';
+import CodeAce from '@/components/CodeAce';
 
-const code = "React.Children.map(children, function[(thisArg)])";
-const code2 = "React.Children.forEach(children, function[(thisArg)])";
-const code3 = "React.Children.count(children)";
-const code4 = "React.Children.only(children)";
-const code5 = "React.Children.toArray(children)";
+const code = 'React.Children.map(children, function[(thisArg)])';
+const code2 = 'React.Children.forEach(children, function[(thisArg)])';
+const code3 = 'React.Children.count(children)';
+const code4 = 'React.Children.only(children)';
+const code5 = 'React.Children.toArray(children)';
 
 class Children extends Component<{}, {}> {
   render() {

@@ -5,7 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import RouterList from "./router";
 
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import { LocaleProvider, message } from "antd";
+import { ConfigProvider, message } from "antd";
 import zhCN from "antd/lib/locale-provider/zh_CN";
 
 import "./style/index.scss";
@@ -20,9 +20,9 @@ message.config({
 const mountNode = document.getElementById("app"); // 设置要挂在的点
 
 ReactDOM.render(
-  <LocaleProvider locale={zhCN}>
+  <ConfigProvider locale={zhCN}>
     <RouterList />
-  </LocaleProvider>,
+  </ConfigProvider>,
   mountNode,
 );
 

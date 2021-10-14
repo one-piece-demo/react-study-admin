@@ -1,6 +1,6 @@
-import * as React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import routers from "./router.config";
+import * as React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import routers from './router.config';
 
 export type Callback = (a: any) => void;
 
@@ -12,14 +12,14 @@ const routerList = routers.map((item, index) => {
         <Route
           exact={item.exact}
           path={item.path}
-          render={props =>
+          render={(props) =>
             item.redirectUrl ? (
               <Redirect to={item.redirectUrl} />
             ) : (
               <ComponentPage {...props} routers={item} />
             )
           }
-          key={"page" + index + item.path}
+          key={'page' + index + item.path}
         />
       );
     }
@@ -27,14 +27,14 @@ const routerList = routers.map((item, index) => {
       <Route
         exact={item.exact}
         path={item.path}
-        render={props =>
+        render={(props) =>
           item.redirectUrl ? <Redirect to={item.redirectUrl} /> : <ComponentPage {...props} />
         }
-        key={"page" + index + item.path}
+        key={'page' + index + item.path}
       />
     );
   }
-  return <Route component={() => <ComponentPage></ComponentPage>} key={"page" + index} />;
+  return <Route component={() => <ComponentPage></ComponentPage>} key={'page' + index} />;
 });
 
 const getConfirmation = (message: string, callback: Callback) => {

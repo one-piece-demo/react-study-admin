@@ -1,7 +1,8 @@
-import React, { PureComponent, Component } from "react";
-import { Button } from "antd";
-import Demo from "@/components/Demo";
-import DocLine from "@/components/DocLine";
+import React, { PureComponent, Component } from 'react';
+import { Button } from 'antd';
+import { PlusOutlined, MinusOutlined, CodeOutlined } from '@ant-design/icons';
+import Demo from '@/components/Demo';
+import DocLine from '@/components/DocLine';
 
 interface CountInterface {
   count: number;
@@ -18,7 +19,7 @@ class PureComt extends PureComponent<CountInterface, {}> {
     return (
       <div>
         <p>点击了 {count} 次 </p>
-        <p>words: {words.join(",")}</p>
+        <p>words: {words.join(',')}</p>
       </div>
     );
   }
@@ -27,7 +28,7 @@ class PureComt extends PureComponent<CountInterface, {}> {
 class PureDemo extends Component<{}, CountInterface> {
   state = {
     count: 0,
-    words: ["marklar"],
+    words: ['marklar'],
   };
 
   onAdd = () => {
@@ -48,7 +49,7 @@ class PureDemo extends Component<{}, CountInterface> {
 
   onWords = () => {
     const words = this.state.words;
-    words.push("marklar");
+    words.push('marklar');
     this.setState({ words: words });
   };
 
@@ -78,15 +79,15 @@ class PureDemo extends Component<{}, CountInterface> {
             <PureComt count={this.state.count} words={this.state.words}></PureComt>
             <h3>实际情况</h3>
             <p>实际点击次数：{this.state.count}</p>
-            <p>实际words: {this.state.words.join(",")}</p>
+            <p>实际words: {this.state.words.join(',')}</p>
             <div className="btns-margin" style={{ marginTop: 16 }}>
-              <Button type="primary" icon="plus" onClick={this.onAdd}>
+              <Button type="primary" icon={<PlusOutlined />} onClick={this.onAdd}>
                 点击增加
               </Button>
-              <Button icon="minus" onClick={this.onReduce}>
+              <Button icon={<MinusOutlined />} onClick={this.onReduce}>
                 点击减少
               </Button>
-              <Button icon="code" onClick={this.onWords}>
+              <Button icon={<CodeOutlined />} onClick={this.onWords}>
                 words
               </Button>
             </div>
