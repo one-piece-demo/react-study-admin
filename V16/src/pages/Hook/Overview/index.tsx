@@ -4,7 +4,7 @@ import Demo from '@/components/Demo';
 import CountDemo from './CountDemo';
 import Hello from './Hello';
 
-class HookOverview extends React.Component<{}, {}> {
+class HookOverview extends React.Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div className="hook-overview">

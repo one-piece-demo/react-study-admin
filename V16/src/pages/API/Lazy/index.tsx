@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Demo from '@/components/Demo';
 import DocLine from '@/components/DocLine';
 import CodeAce from '@/components/CodeAce';
@@ -17,7 +17,7 @@ function MyComponent() {
   );
 }`;
 
-class RClone extends Component<{}, {}> {
+class RClone extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

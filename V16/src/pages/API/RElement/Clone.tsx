@@ -11,7 +11,7 @@ const code = `React.cloneElement(
 
 const code2 = '<element.type {...element.props} {...props}>{children}</element.type>';
 
-class RClone extends Component<{}, {}> {
+class RClone extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

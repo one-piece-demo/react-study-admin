@@ -9,7 +9,7 @@ const code = `React.createElement(
   [...children]
 )`;
 
-class RCreate extends Component<{}, {}> {
+class RCreate extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

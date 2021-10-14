@@ -3,7 +3,7 @@ import RCreate from './Create';
 import RClone from './Clone';
 import RValid from './Valid';
 
-class RElement extends Component<{}, {}> {
+class RElement extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

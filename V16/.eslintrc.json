@@ -8,8 +8,7 @@
 		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
 		"react-app",
-		"prettier",
-    "prettier/@typescript-eslint"
+		"prettier"
 	],
 	"plugins": ["@typescript-eslint", "react", "prettier", "react-hooks"],
   "rules": {
@@ -40,5 +39,6 @@
 		"@typescript-eslint/explicit-member-accessibility": 0,
 		"@typescript-eslint/explicit-function-return-type": 0,
 		"@typescript-eslint/no-explicit-any": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0
 	}
 }

@@ -4,7 +4,7 @@ export interface ErrorBoundaryState {
   hasError: boolean;
 }
 
-class ErrorBoundary extends React.Component<{}, ErrorBoundaryState> {
+class ErrorBoundary extends React.Component<Record<string, unknown>, ErrorBoundaryState> {
   constructor(props: Record<string, any>) {
     super(props);
     this.state = { hasError: false };
@@ -12,7 +12,7 @@ class ErrorBoundary extends React.Component<{}, ErrorBoundaryState> {
 
   static getDerivedStateFromError(error: boolean) {
     // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+    return { hasError: error };
   }
 
   componentDidCatch(error: any, info: any) {

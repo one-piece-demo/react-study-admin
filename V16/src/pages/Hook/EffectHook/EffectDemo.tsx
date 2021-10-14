@@ -145,7 +145,7 @@ function Counter() {
   );
 }
 
-const EffectDemo: React.FunctionComponent<{}> = () => {
+const EffectDemo: React.FunctionComponent<Record<string, unknown>> = () => {
   const [value, setValue] = useState('');
   const [scount, setCount] = useState(0);
   const [data, setData] = useState<DataObj[]>([]);

@@ -4,7 +4,7 @@ import { RouterProps, RenderRouterProps } from '@/utils/TS/interface';
 
 interface Props extends RenderRouterProps<Record<string, any>>, RouteComponentProps {}
 
-class RenderRouter<T> extends React.Component<Props, {}> {
+class RenderRouter<T> extends React.Component<Props, Record<string, unknown>> {
   requireLogin = (component: React.ReactNode, props: RouterProps<T>) => {
     if (props.redirectUrl) {
       return <Redirect to={props.redirectUrl} />;

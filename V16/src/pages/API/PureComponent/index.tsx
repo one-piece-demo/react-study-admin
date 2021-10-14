@@ -13,7 +13,7 @@ interface CountInterface {
 
 // interface States extends CountInterface {}
 
-class PureComt extends PureComponent<CountInterface, {}> {
+class PureComt extends PureComponent<CountInterface, Record<string, unknown>> {
   render() {
     const { count, words } = this.props;
     return (
@@ -25,7 +25,7 @@ class PureComt extends PureComponent<CountInterface, {}> {
   }
 }
 
-class PureDemo extends Component<{}, CountInterface> {
+class PureDemo extends Component<Record<string, unknown>, CountInterface> {
   state = {
     count: 0,
     words: ['marklar'],

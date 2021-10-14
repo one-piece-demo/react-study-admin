@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Demo from '@/components/Demo';
 import DocLine from '@/components/DocLine';
 import CodeAce from '@/components/CodeAce';
@@ -9,7 +9,7 @@ const code3 = 'React.Children.count(children)';
 const code4 = 'React.Children.only(children)';
 const code5 = 'React.Children.toArray(children)';
 
-class Children extends Component<{}, {}> {
+class Children extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

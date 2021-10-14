@@ -12,7 +12,7 @@ interface Props extends RenderRouterProps<Record<string, any>>, RouteComponentPr
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-class App<T> extends React.Component<Props, {}> {
+class App<T> extends React.Component<Props, Record<string, unknown>> {
   state = {};
 
   componentWillReceiveProps(nextProps: RouteComponentProps) {

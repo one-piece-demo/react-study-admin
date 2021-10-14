@@ -1,14 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import * as serviceWorker from "./serviceWorker";
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
 // 引入路由配置模块
-import RouterList from "./router";
+import RouterList from './router';
 
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
-import { ConfigProvider, message } from "antd";
-import zhCN from "antd/lib/locale-provider/zh_CN";
+import { ConfigProvider, message } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 
-import "./style/index.scss";
+import './style/index.scss';
 
 // antd 全局配置
 message.config({
@@ -17,7 +16,7 @@ message.config({
   maxCount: 3,
 });
 
-const mountNode = document.getElementById("app"); // 设置要挂在的点
+const mountNode = document.getElementById('app'); // 设置要挂在的点
 
 ReactDOM.render(
   <ConfigProvider locale={zhCN}>

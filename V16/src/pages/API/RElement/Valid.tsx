@@ -5,7 +5,7 @@ import CodeAce from '@/components/CodeAce';
 
 const code = 'React.isValidElement(object)';
 
-class RValid extends Component<{}, {}> {
+class RValid extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

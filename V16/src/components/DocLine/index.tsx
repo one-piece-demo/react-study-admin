@@ -3,7 +3,7 @@ import { tuple } from '@/utils/TS/type';
 import './index.scss';
 
 const DocLineTypes = tuple('text', 'warn', 'error');
-export type DocLineType = (typeof DocLineTypes)[number];
+export type DocLineType = typeof DocLineTypes[number];
 
 export interface DocLineProps {
   type?: DocLineType;

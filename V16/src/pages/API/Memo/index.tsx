@@ -35,7 +35,7 @@ function memoComt(props: CountInterface): JSX.Element {
 
 const MemoComt = React.memo(memoComt);
 
-class MemoDemo extends Component<{}, CountInterface> {
+class MemoDemo extends Component<Record<string, unknown>, CountInterface> {
   state = {
     count: 0,
     words: ['marklar'],

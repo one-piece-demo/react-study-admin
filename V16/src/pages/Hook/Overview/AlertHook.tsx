@@ -3,7 +3,7 @@ import { Alert } from 'antd';
 import { tuple } from '@/utils/TS/type';
 
 const AlertTypes = tuple('success', 'info', 'error', 'warning');
-export type AlertType = (typeof AlertTypes)[number];
+export type AlertType = typeof AlertTypes[number];
 
 export interface AlertHookProps {
   title: string;

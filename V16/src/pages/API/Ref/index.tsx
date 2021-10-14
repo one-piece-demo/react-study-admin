@@ -4,7 +4,7 @@ import DocLine from '@/components/DocLine';
 import MyComponent from './CreateRef';
 import ForwardRef from './ForwardRef';
 
-class Rref extends Component<{}, {}> {
+class Rref extends Component<Record<string, unknown>, Record<string, unknown>> {
   render() {
     return (
       <div>

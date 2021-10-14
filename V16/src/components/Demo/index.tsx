@@ -7,7 +7,7 @@ export interface DemoProps {
   extra?: React.ReactNode;
 }
 
-class Demo extends React.Component<DemoProps, {}> {
+class Demo extends React.Component<DemoProps, Record<string, unknown>> {
   render() {
     const { title, extra, children } = this.props;
     return (
