@@ -117,7 +117,7 @@ class App<T> extends React.Component<Props, Record<string, unknown>> {
                   </span>
                 </Col>
                 <Col span={4} className="t-right">
-                  <span className="bold">v16.8.6</span>&nbsp;&nbsp;
+                  <span className="bold">v17.0.2</span>&nbsp;&nbsp;
                   <a href="https://react.docschina.org/">
                     <GithubOutlined />
                   </a>

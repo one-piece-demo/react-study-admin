@@ -27,6 +27,9 @@ const Ref = loadable(() => import('../pages/API/Ref'), {
 const Lazy = loadable(() => import('../pages/API/Lazy'), {
   fallback: <LoadPage />,
 });
+const Async = loadable(() => import('../pages/API/Async'), {
+  fallback: <LoadPage />,
+});
 
 /**
  * Hook
@@ -97,6 +100,12 @@ const navsList: RouterProps<Record<string, any>>[] = [
         subTitle: '懒加载',
         path: '/api/lazy',
         component: Lazy,
+      },
+      {
+        title: 'async',
+        subTitle: '异步加载',
+        path: '/api/async',
+        component: Async,
       },
     ],
   },

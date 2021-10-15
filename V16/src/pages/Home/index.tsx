@@ -7,9 +7,7 @@ class Home extends Component {
       <div className="home">
         <header className="home-body">
           <img src={logo} alt="Logo" className="react-logo" />
-          <p>
-            Edit <code>src/xxx</code> and save to reload.
-          </p>
+          <p>Hello World</p>
           <a
             className="react-link"
             href="https://reactjs.org"
